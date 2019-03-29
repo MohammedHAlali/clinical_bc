@@ -1,5 +1,11 @@
 '''
-design a TF cnn model to work on BC images and labels
+design a TensorFlow's CNN model to train and test on breast cancer images and labels
+
+Run this code as: python 4_tf_cnn_model.py exp 1 lr 0.1 epo 1 batch 8
+the parameters may be changed as desired.
+
+@author: Mohammed H. Alali
+March, 2019
 '''
 
 from __future__ import print_function
@@ -11,7 +17,7 @@ matplotlib.use('agg')
 import matplotlib.pyplot as plt
 #tf.device('/cpu:0')
 
-out_dir = 'out/'
+out_dir = ''
 tf.reset_default_graph()
 
 #default parameters
@@ -21,6 +27,7 @@ epochs = 1
 batch_size = 1
 num_classes = 49
 fold = 1
+
 #tf Graph Input
 X = tf.placeholder(tf.float32, [None, 2048, 4096, 4], name='input_placeholder')
 Y = tf.placeholder(tf.float32, [None, num_classes], name='output_placeholder')
@@ -47,10 +54,10 @@ else:
 
 
 
-X_train = np.load('data/train_images_fold{}.npz'.format(fold))['arr_0']
-y_train = np.load('data/train_labels_fold{}.npz'.format(fold))['arr_0']
-X_test = np.load('data/test_images_fold{}.npz'.format(fold))['arr_0']
-y_test = np.load('data/test_labels_fold{}.npz'.format(fold))['arr_0']
+X_train = np.load('train_images_fold{}.npz'.format(fold))['arr_0']
+y_train = np.load('train_labels_fold{}.npz'.format(fold))['arr_0']
+X_test = np.load('test_images_fold{}.npz'.format(fold))['arr_0']
+y_test = np.load('test_labels_fold{}.npz'.format(fold))['arr_0']
 y_train = y_train.astype(np.float16)
 y_test = y_test.astype(np.float16)
 
