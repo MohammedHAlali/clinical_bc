@@ -19,6 +19,14 @@ matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import os
 
+#create output directory
+try:
+	os.mkdir(out_path)
+except:
+	print('Creation of the directory {} failed'.format(out_path))
+else:
+	print('Successfully created director {} for output'.format(out_path))
+
 images_list = os.listdir(im_path)
 #print('list of images: ', images_list)
 
