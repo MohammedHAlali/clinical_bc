@@ -22,7 +22,7 @@ from sklearn.utils import shuffle
 #from keras.applications.imagenet_utils import preprocess_input
 
 # Define data path
-data_path = '../data/diagnostic_images/npy'
+data_path = 'npy/'
 label_file = 'clean_features.csv'
 data_dir_list = os.listdir(data_path)
 print('number of images: ', len(data_dir_list))
