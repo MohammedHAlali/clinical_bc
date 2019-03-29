@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+
 code to read clinical data from organized txt file that was downloaded from cancer.gov portal
 we only care about the cases that we've diganostic images for them.
 
+The output is 'clean_features.csv', contains all features in binary format, ready to be used as labels for Neural Network
 Mohammed Alali
+March, 2019
 """
 import csv
 
