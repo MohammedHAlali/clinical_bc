@@ -1,6 +1,11 @@
 '''
 modified from: https://github.com/anujshah1003/Transfer-Learning-in-keras---custom-data.git
+
+This code reads images (.npy) and their corresponding labels from (clean_features.csv)
 to prepare breast cancer data of diagnostic images and multi-labels
+
+@author: Mohammed H. Alali
+March, 2019
 '''
 
 import os
