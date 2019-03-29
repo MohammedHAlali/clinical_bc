@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Feb 23, 2019
 this code is to read BC diagnostic images (png), resizes them to (1024, 2048), and saves them in .npy format
+Data augmentation was applied to every image, three more copies were added for every image.
+The three copies are left-right, up-down, and left-right up-down flipping.
+
 @author: Mohammed Alali
+Feb, 2019
 """
 
 im_path = 'images/'
