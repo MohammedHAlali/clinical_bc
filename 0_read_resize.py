@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Feb 23 12:03:54 2019
-this code is to read BC diagnostic images and resize them to (1024, 2048)
-@author: moham
+Created on Sat Feb 23, 2019
+this code is to read BC diagnostic images (png), resizes them to (1024, 2048), and saves them in .npy format
+@author: Mohammed Alali
 """
 
-im_path = '/work/deogun/alali/breast/data/diagnostic_images/png'
-out_path = '/work/deogun/alali/breast/data/diagnostic_images/npy/'
+im_path = 'images/'
+out_path = 'npy/'
 #from __future__ import print_function
 
 import numpy as np
