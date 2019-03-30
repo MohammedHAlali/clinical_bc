@@ -14,3 +14,10 @@ How to reproduce:
   - The feature's value is converted into binary format.
   - The final binary formatted features are stored in a csv file.
   - At the end, this code should output the csv file called: 'clean_features.csv'
+3. Run [2_combine_img_label.py](2_combine_img_label.py) code, which will do the following:
+  - Read all images (.npy) and associate them with their labels, i.e. list of 49 features.
+  - At the end, this code should output three data files:
+    - all 452 images in one file, i.e. 'data_images.npz'
+    - all (corresponding) labels in one file, i.e. 'data_labels.npz'
+    - A third file, i.e. 'data_labels.csv' that are used to count the number of feature count in all dataset.
+4. Run [3_create_fold_data.py](3_create_fold_data.py) code, which will do the following:
