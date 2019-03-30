@@ -1,8 +1,9 @@
 '''
 design a TensorFlow's CNN model to train and test on breast cancer images and labels
 
-Run this code as: python 4_tf_cnn_model.py exp 1 lr 0.1 epo 1 batch 8
-the parameters may be changed as desired.
+Run this code as: python 4_tf_cnn_model.py exp 1 lr 0.1 epo 1 batch 8 fold 1
+the parameters may be changed as desired. 
+Make sure to change fold parameter to 2, 3, 4, 5 in order to take the average of all 5 folds.
 
 @author: Mohammed H. Alali
 March, 2019
