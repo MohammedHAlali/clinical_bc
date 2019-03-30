@@ -21,3 +21,10 @@ How to reproduce:
     - all (corresponding) labels in one file, i.e. 'data_labels.npz'
     - A third file, i.e. 'data_labels.csv' that are used to count the number of feature count in all dataset.
 4. Run [3_create_fold_data.py](3_create_fold_data.py) code, which will do the following:
+  - Read the two data files, split them into 5 folds of training and testing data.
+  - At the end, 4x5=20 data files will be created.
+5. Run [4_tf_cnn_model.py](4_tf_cnn_model.py) code as follows:
+  - python 4_tf_cnn_model.py exp 1 lr 0.1 epo 1 batch 8 fold 1
+  - This will run CNN model for training and testing.
+  - At the end, results are shown in csv files.
+  - For all 5 folds, take the average result of all 5 numbers.
